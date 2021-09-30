@@ -1,0 +1,8 @@
+with open('baza.txt', 'r', encoding='utf-8') as file:
+    baz = file.readlines()
+
+for i in range(len(baz)):
+    elem = baz[i].split(',')
+    if int(elem[2].strip()) <31:
+        print(f"""Уважаемый(ая) {elem[0]}! Приглашаем Вас принять участие в курсах по изучению Python.
+Подробную информацию мы выслали на email: {elem[1].strip()}""")
